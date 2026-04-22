@@ -1,0 +1,28 @@
+{
+  "project": {
+    "id": "forge-jewellery",
+    "name": "Forge Jewellery",
+    "status": "published"
+  },
+  "generatedAt": "2026-04-22T10:41:54.686Z",
+  "pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "slug": "/",
+      "sections": 7
+    },
+    {
+      "id": "shop",
+      "name": "Shop",
+      "slug": "/shop",
+      "sections": 1
+    },
+    {
+      "id": "about",
+      "name": "About",
+      "slug": "/about",
+      "sections": 1
+    }
+  ]
+}
