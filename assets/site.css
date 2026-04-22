@@ -52,6 +52,12 @@ a{color:inherit;text-decoration:none}
 .fb-footer li{margin-bottom:0.5rem;opacity:0.8;font-size:0.9rem}
 .fb-social{text-align:center;padding:1.5rem 0;opacity:0.8;font-size:0.9rem}
 .fb-copy{text-align:center;opacity:0.6;font-size:0.85rem}
+.fb-faq-item{border-bottom:1px solid rgba(0,0,0,0.1);padding:1rem 0}
+.fb-faq-item summary{font-weight:600;cursor:pointer;font-size:1rem;list-style:none;display:flex;align-items:center;justify-content:space-between}
+.fb-faq-item summary::-webkit-details-marker{display:none}
+.fb-faq-item summary::after{content:'+';font-size:1.5rem;opacity:0.5;transition:transform 0.2s}
+.fb-faq-item[open] summary::after{transform:rotate(45deg)}
+.fb-faq-item p{margin-top:0.75rem;opacity:0.8;line-height:1.6}
 
 
 :root {
@@ -94,6 +100,13 @@ h1,h2,h3,h4{font-family:var(--fb-heading-font),system-ui,sans-serif}
 .fb-header{position:sticky;top:0;z-index:50;background:var(--fb-bg);border-bottom:1px solid var(--fb-border);padding:1rem 0}
 .fb-header-inner{max-width:var(--fb-max-w);margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;gap:2rem}
 .fb-header-inner .fb-brand{font-weight:800;font-size:1.25rem}
+/* Responsive visibility */
+@media(max-width:640px){.fb-hide-mobile{display:none !important}}
+@media(min-width:641px) and (max-width:1024px){.fb-hide-tablet{display:none !important}}
+@media(min-width:1025px){.fb-hide-desktop{display:none !important}}
+/* Mobile product grid defaults to 2 cols unless overridden */
+@media(max-width:640px){.fb-grid{grid-template-columns:repeat(2,1fr) !important}}
+@media(max-width:420px){.fb-grid{grid-template-columns:1fr !important}}
 .fb-header-inner nav{flex:1;display:flex;gap:1.5rem}
 .fb-header-inner a{color:var(--fb-text);text-decoration:none;font-size:0.95rem}
 .fb-cart-btn{background:none;border:1px solid var(--fb-border);padding:0.5rem 1rem;cursor:pointer;font-weight:600;border-radius:var(--fb-radius);color:var(--fb-text)}
