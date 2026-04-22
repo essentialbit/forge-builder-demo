@@ -9,9 +9,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-<style>body{font-family:'Inter',system-ui,sans-serif;background:#ffffff;color:#0a0a0a}</style>
+<script defer src="/assets/cart.js"></script>
 </head>
 <body>
+<header class="fb-header">
+  <div class="fb-header-inner">
+    <a href="/" class="fb-brand" style="font-family:var(--fb-heading-font)"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=200&amp;q=80" alt="Forge Jewellery" style="max-height:40px"></a>
+    <nav><a href="/">Home</a><a href="/shop/">Shop</a><a href="/about/">About</a></nav>
+    <button class="fb-cart-btn" onclick="window.fbCart?.open()">Cart (<span class="fb-cart-count">0</span>)</button>
+  </div>
+</header>
+<div id="fb-cart-overlay" onclick="window.fbCart?.close()"></div>
+<aside id="fb-cart-drawer" aria-label="Shopping cart">
+  <header>
+    <h2 style="margin:0;font-size:1.1rem">Your cart</h2>
+    <button onclick="window.fbCart?.close()" style="background:none;border:none;font-size:1.5rem;cursor:pointer">×</button>
+  </header>
+  <div class="fb-cart-items" id="fb-cart-items"></div>
+  <footer>
+    <div class="fb-cart-total">
+      <span>Total</span>
+      <span id="fb-cart-total">$0.00</span>
+    </div>
+    <button onclick="window.fbCart?.checkout()" style="width:100%;padding:0.875rem;background:var(--fb-accent);color:var(--fb-on-accent);border:none;border-radius:var(--fb-radius);font-weight:700;cursor:pointer">Checkout</button>
+  </footer>
+</aside>
 
 <section class="fb-hero" style="background:#000000;color:#ffffff;text-align:center">
   <div class="fb-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1920&amp;q=80')"></div>
@@ -29,19 +51,19 @@
     <h2 style="font-family:Inter">Shop by Category</h2>
     <p class="fb-subtitle">Find your perfect piece</p>
     <div class="fb-category-grid">
-    <a class="fb-category" href="/collections/rings">
+    <a class="fb-category" href="/collections/rings/">
       <img src="https://forgejewellery.com.au/images/products/FJ-RG-0001.jpg" alt="rings" loading="lazy">
       <span>Rings</span>
     </a>
-    <a class="fb-category" href="/collections/necklaces">
+    <a class="fb-category" href="/collections/necklaces/">
       <img src="https://forgejewellery.com.au/images/products/FJ-NC-0001.jpg" alt="necklaces" loading="lazy">
       <span>Necklaces</span>
     </a>
-    <a class="fb-category" href="/collections/bracelets">
+    <a class="fb-category" href="/collections/bracelets/">
       <img src="https://forgejewellery.com.au/images/products/FJ-BR-0001.jpg" alt="bracelets" loading="lazy">
       <span>Bracelets</span>
     </a>
-    <a class="fb-category" href="/collections/earrings">
+    <a class="fb-category" href="/collections/earrings/">
       <img src="https://forgejewellery.com.au/images/products/FJ-ER-0001.jpg" alt="earrings" loading="lazy">
       <span>Earrings</span>
     </a></div>
@@ -54,46 +76,64 @@
     <p class="fb-subtitle">Handpicked just for you</p>
     <div class="fb-grid" style="grid-template-columns:repeat(3,minmax(0,1fr))">
     <article class="fb-product">
-      <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0001.jpg" alt="EDITED BY ADMIN - Gold Rope" loading="lazy"></div>
-      <div class="fb-product-body">
-        <h3>EDITED BY ADMIN - Gold Rope</h3>
-        <div class="fb-product-price">$29.99</div>
-      </div>
+      <a href="/products/gold-rope-chain-necklace-25mm-18/" style="display:block;color:inherit;text-decoration:none">
+        <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0001.jpg" alt="Gold Rope Chain Necklace (2.5mm, 18&quot;)" loading="lazy"></div>
+        <div class="fb-product-body">
+          <h3>Gold Rope Chain Necklace (2.5mm, 18&quot;)</h3>
+          <div class="fb-product-price">$10</div>
+        </div>
+      </a>
+      <button onclick='window.fbCart?.add({"sku":"FJ-NC-0001","name":"Gold Rope Chain Necklace (2.5mm, 18\")","price":10,"image":"https://forgejewellery.com.au/images/products/FJ-NC-0001.jpg","slug":"gold-rope-chain-necklace-25mm-18"})' style="margin:0 1rem 1rem;padding:0.5rem 1rem;background:var(--fb-accent,#000);color:var(--fb-on-accent,#fff);border:none;border-radius:var(--fb-radius,8px);font-weight:600;cursor:pointer;width:calc(100% - 2rem)">Add to cart</button>
     </article>
     <article class="fb-product">
-      <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0005.jpg" alt="Silver Rope Chain Necklace (2.5mm, 18&quot;)" loading="lazy"></div>
-      <div class="fb-product-body">
-        <h3>Silver Rope Chain Necklace (2.5mm, 18&quot;)</h3>
-        <div class="fb-product-price">$10</div>
-      </div>
+      <a href="/products/silver-rope-chain-necklace-25mm-18/" style="display:block;color:inherit;text-decoration:none">
+        <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0005.jpg" alt="Silver Rope Chain Necklace (2.5mm, 18&quot;)" loading="lazy"></div>
+        <div class="fb-product-body">
+          <h3>Silver Rope Chain Necklace (2.5mm, 18&quot;)</h3>
+          <div class="fb-product-price">$10</div>
+        </div>
+      </a>
+      <button onclick='window.fbCart?.add({"sku":"FJ-NC-0005","name":"Silver Rope Chain Necklace (2.5mm, 18\")","price":10,"image":"https://forgejewellery.com.au/images/products/FJ-NC-0005.jpg","slug":"silver-rope-chain-necklace-25mm-18"})' style="margin:0 1rem 1rem;padding:0.5rem 1rem;background:var(--fb-accent,#000);color:var(--fb-on-accent,#fff);border:none;border-radius:var(--fb-radius,8px);font-weight:600;cursor:pointer;width:calc(100% - 2rem)">Add to cart</button>
     </article>
     <article class="fb-product">
-      <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-BR-0001.jpg" alt="Gold Rope Bracelet (2.5mm)" loading="lazy"></div>
-      <div class="fb-product-body">
-        <h3>Gold Rope Bracelet (2.5mm)</h3>
-        <div class="fb-product-price">$10</div>
-      </div>
+      <a href="/products/gold-rope-bracelet-25mm/" style="display:block;color:inherit;text-decoration:none">
+        <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-BR-0001.jpg" alt="Gold Rope Bracelet (2.5mm)" loading="lazy"></div>
+        <div class="fb-product-body">
+          <h3>Gold Rope Bracelet (2.5mm)</h3>
+          <div class="fb-product-price">$10</div>
+        </div>
+      </a>
+      <button onclick='window.fbCart?.add({"sku":"FJ-BR-0001","name":"Gold Rope Bracelet (2.5mm)","price":10,"image":"https://forgejewellery.com.au/images/products/FJ-BR-0001.jpg","slug":"gold-rope-bracelet-25mm"})' style="margin:0 1rem 1rem;padding:0.5rem 1rem;background:var(--fb-accent,#000);color:var(--fb-on-accent,#fff);border:none;border-radius:var(--fb-radius,8px);font-weight:600;cursor:pointer;width:calc(100% - 2rem)">Add to cart</button>
     </article>
     <article class="fb-product">
-      <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-BR-0005.jpg" alt="Silver Rope Bracelet (2.5mm)" loading="lazy"></div>
-      <div class="fb-product-body">
-        <h3>Silver Rope Bracelet (2.5mm)</h3>
-        <div class="fb-product-price">$10</div>
-      </div>
+      <a href="/products/silver-rope-bracelet-25mm/" style="display:block;color:inherit;text-decoration:none">
+        <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-BR-0005.jpg" alt="Silver Rope Bracelet (2.5mm)" loading="lazy"></div>
+        <div class="fb-product-body">
+          <h3>Silver Rope Bracelet (2.5mm)</h3>
+          <div class="fb-product-price">$10</div>
+        </div>
+      </a>
+      <button onclick='window.fbCart?.add({"sku":"FJ-BR-0005","name":"Silver Rope Bracelet (2.5mm)","price":10,"image":"https://forgejewellery.com.au/images/products/FJ-BR-0005.jpg","slug":"silver-rope-bracelet-25mm"})' style="margin:0 1rem 1rem;padding:0.5rem 1rem;background:var(--fb-accent,#000);color:var(--fb-on-accent,#fff);border:none;border-radius:var(--fb-radius,8px);font-weight:600;cursor:pointer;width:calc(100% - 2rem)">Add to cart</button>
     </article>
     <article class="fb-product">
-      <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0009.jpg" alt="Gold Rope Chain Necklace (3mm, 16&quot;)" loading="lazy"></div>
-      <div class="fb-product-body">
-        <h3>Gold Rope Chain Necklace (3mm, 16&quot;)</h3>
-        <div class="fb-product-price">$20</div>
-      </div>
+      <a href="/products/gold-rope-chain-necklace-3mm-16/" style="display:block;color:inherit;text-decoration:none">
+        <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0009.jpg" alt="Gold Rope Chain Necklace (3mm, 16&quot;)" loading="lazy"></div>
+        <div class="fb-product-body">
+          <h3>Gold Rope Chain Necklace (3mm, 16&quot;)</h3>
+          <div class="fb-product-price">$20</div>
+        </div>
+      </a>
+      <button onclick='window.fbCart?.add({"sku":"FJ-NC-0009","name":"Gold Rope Chain Necklace (3mm, 16\")","price":20,"image":"https://forgejewellery.com.au/images/products/FJ-NC-0009.jpg","slug":"gold-rope-chain-necklace-3mm-16"})' style="margin:0 1rem 1rem;padding:0.5rem 1rem;background:var(--fb-accent,#000);color:var(--fb-on-accent,#fff);border:none;border-radius:var(--fb-radius,8px);font-weight:600;cursor:pointer;width:calc(100% - 2rem)">Add to cart</button>
     </article>
     <article class="fb-product">
-      <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0015.jpg" alt="Silver Rope Chain Necklace (3mm, 16&quot;)" loading="lazy"></div>
-      <div class="fb-product-body">
-        <h3>Silver Rope Chain Necklace (3mm, 16&quot;)</h3>
-        <div class="fb-product-price">$10</div>
-      </div>
+      <a href="/products/silver-rope-chain-necklace-3mm-16/" style="display:block;color:inherit;text-decoration:none">
+        <div class="fb-product-img"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0015.jpg" alt="Silver Rope Chain Necklace (3mm, 16&quot;)" loading="lazy"></div>
+        <div class="fb-product-body">
+          <h3>Silver Rope Chain Necklace (3mm, 16&quot;)</h3>
+          <div class="fb-product-price">$10</div>
+        </div>
+      </a>
+      <button onclick='window.fbCart?.add({"sku":"FJ-NC-0015","name":"Silver Rope Chain Necklace (3mm, 16\")","price":10,"image":"https://forgejewellery.com.au/images/products/FJ-NC-0015.jpg","slug":"silver-rope-chain-necklace-3mm-16"})' style="margin:0 1rem 1rem;padding:0.5rem 1rem;background:var(--fb-accent,#000);color:var(--fb-on-accent,#fff);border:none;border-radius:var(--fb-radius,8px);font-weight:600;cursor:pointer;width:calc(100% - 2rem)">Add to cart</button>
     </article></div>
   </div>
 </section>
@@ -103,11 +143,30 @@
   <div class="fb-inner fb-newsletter-inner">
     <h2 style="font-family:Inter">Join the Club</h2>
     <p>Get exclusive access to new arrivals, promotions, and more.</p>
-    <form class="fb-newsletter-form" onsubmit="event.preventDefault();alert('Thanks — this is a preview-only form.');">
+    <form class="fb-newsletter-form" onsubmit="return fbNewsletterSubmit(event,'newsletter','')">
       <input type="email" name="email" required placeholder="your@email.com">
       <button type="submit" style="background:#0a0a0a;color:#D4AF37">Subscribe</button>
     </form>
+    <p id="fb-nl-msg" style="display:none;margin-top:1rem;opacity:0.8"></p>
   </div>
+  <script>
+    function fbNewsletterSubmit(ev, listId, endpoint){
+      ev.preventDefault();
+      const form = ev.target;
+      const email = form.email.value;
+      const msg = document.getElementById('fb-nl-msg');
+      msg.style.display = 'block';
+      msg.textContent = 'Submitting…';
+      (endpoint
+        ? fetch(endpoint, { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({type:'newsletter', payload:{email, listId}}) })
+        : Promise.resolve({ok:true})
+      ).then(r => r.ok
+        ? (msg.textContent = 'Thanks! You’re subscribed.', form.reset())
+        : (msg.textContent = 'Could not subscribe. Please try again later.')
+      ).catch(() => msg.textContent = 'Could not subscribe. Please try again later.');
+      return false;
+    }
+  </script>
 </section>
 
 <footer class="fb-footer" style="background:#0a0a0a;color:#ffffff">
@@ -133,6 +192,6 @@
     <p class="fb-copy">© 2026 Forge Jewellery. All rights reserved.</p>
   </div>
 </footer>
-<!-- Built with Forge Builder — 2026-04-22T11:50:54.024Z -->
+<!-- Built with Forge Builder — 2026-04-22T12:08:50.556Z -->
 </body>
 </html>

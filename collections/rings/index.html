@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rings — Forge Jewellery</title>
+<meta name="description" content="Rings">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/cart.js"></script>
+</head>
+<body>
+<header class="fb-header">
+  <div class="fb-header-inner">
+    <a href="/" class="fb-brand" style="font-family:var(--fb-heading-font)"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=200&amp;q=80" alt="Forge Jewellery" style="max-height:40px"></a>
+    <nav><a href="/">Home</a><a href="/shop/">Shop</a><a href="/about/">About</a></nav>
+    <button class="fb-cart-btn" onclick="window.fbCart?.open()">Cart (<span class="fb-cart-count">0</span>)</button>
+  </div>
+</header>
+<div id="fb-cart-overlay" onclick="window.fbCart?.close()"></div>
+<aside id="fb-cart-drawer" aria-label="Shopping cart">
+  <header>
+    <h2 style="margin:0;font-size:1.1rem">Your cart</h2>
+    <button onclick="window.fbCart?.close()" style="background:none;border:none;font-size:1.5rem;cursor:pointer">×</button>
+  </header>
+  <div class="fb-cart-items" id="fb-cart-items"></div>
+  <footer>
+    <div class="fb-cart-total">
+      <span>Total</span>
+      <span id="fb-cart-total">$0.00</span>
+    </div>
+    <button onclick="window.fbCart?.checkout()" style="width:100%;padding:0.875rem;background:var(--fb-accent);color:var(--fb-on-accent);border:none;border-radius:var(--fb-radius);font-weight:700;cursor:pointer">Checkout</button>
+  </footer>
+</aside>
+
+<section class="fb-section">
+  <div class="fb-inner" style="margin:0 auto;padding:0 1.5rem">
+    <h1 style="font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:0.5rem">Rings</h1>
+    <div style="margin-bottom:2rem"></div>
+    <p style="text-align:center;opacity:0.6;font-size:0.9rem;margin-bottom:2rem">18 products</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem"><a href="/products/05ct-vvs-moissanite-ring-4-claw-setting-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0057.jpg" alt="0.5ct VVS Moissanite Ring — 4-Claw Setting (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">0.5ct VVS Moissanite Ring — 4-Claw Setting (Silver)</div>
+    <div style="font-weight:700">$70</div>
+  </div>
+</a><a href="/products/1ct-vvs-moissanite-cocktail-ring-sterling-silver-size-8/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0402.jpg" alt="1ct VVS Moissanite Cocktail Ring (Sterling Silver, Size 8)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">1ct VVS Moissanite Cocktail Ring (Sterling Silver, Size 8)</div>
+    <div style="font-weight:700">$360</div>
+  </div>
+</a><a href="/products/1ct-vvs-moissanite-ring-4-claw-setting-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0060.jpg" alt="1ct VVS Moissanite Ring — 4-Claw Setting (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">1ct VVS Moissanite Ring — 4-Claw Setting (Silver)</div>
+    <div style="font-weight:700">$80</div>
+  </div>
+</a><a href="/products/1ct-vvs-moissanite-solitaire-ring-radiant-cut-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0036.jpg" alt="1ct VVS Moissanite Solitaire Ring — Radiant Cut (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">1ct VVS Moissanite Solitaire Ring — Radiant Cut (Silver)</div>
+    <div style="font-weight:700">$110</div>
+  </div>
+</a><a href="/products/1ct-vvs-moissanite-solitaire-ring-round-cut-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0001.jpg" alt="1ct VVS Moissanite Solitaire Ring — Round Cut (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">1ct VVS Moissanite Solitaire Ring — Round Cut (Silver)</div>
+    <div style="font-weight:700">$90</div>
+  </div>
+</a><a href="/products/2ct-vvs-moissanite-cocktail-ring-sterling-silver-size-8/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0407.jpg" alt="2ct VVS Moissanite Cocktail Ring (Sterling Silver, Size 8)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">2ct VVS Moissanite Cocktail Ring (Sterling Silver, Size 8)</div>
+    <div style="font-weight:700">$450</div>
+  </div>
+</a><a href="/products/2ct-vvs-moissanite-engagement-ring-set-round-cut-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0043.jpg" alt="2ct VVS Moissanite Engagement Ring Set — Round Cut (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">2ct VVS Moissanite Engagement Ring Set — Round Cut (Silver)</div>
+    <div style="font-weight:700">$140</div>
+  </div>
+</a><a href="/products/2ct-vvs-moissanite-solitaire-ring-oval-cut-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0022.jpg" alt="2ct VVS Moissanite Solitaire Ring — Oval Cut (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">2ct VVS Moissanite Solitaire Ring — Oval Cut (Silver)</div>
+    <div style="font-weight:700">$150</div>
+  </div>
+</a><a href="/products/2ct-vvs-moissanite-solitaire-ring-round-cut-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0008.jpg" alt="2ct VVS Moissanite Solitaire Ring — Round Cut (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">2ct VVS Moissanite Solitaire Ring — Round Cut (Silver)</div>
+    <div style="font-weight:700">$120</div>
+  </div>
+</a><a href="/products/3ct-vvs-moissanite-mens-ring-sterling-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-MO-0001.jpg" alt="3ct VVS Moissanite Men&#39;s Ring (Sterling Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">3ct VVS Moissanite Men&#39;s Ring (Sterling Silver)</div>
+    <div style="font-weight:700">$500</div>
+  </div>
+</a><a href="/products/3ct-vvs-moissanite-mens-ring-sterling-silver-sizes-812/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0351.jpg" alt="3ct VVS Moissanite Men&#39;s Ring (Sterling Silver, Sizes 8–12)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">3ct VVS Moissanite Men&#39;s Ring (Sterling Silver, Sizes 8–12)</div>
+    <div style="font-weight:700">$540</div>
+  </div>
+</a><a href="/products/3ct-vvs-moissanite-solitaire-ring-round-cut-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0015.jpg" alt="3ct VVS Moissanite Solitaire Ring — Round Cut (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">3ct VVS Moissanite Solitaire Ring — Round Cut (Silver)</div>
+    <div style="font-weight:700">$150</div>
+  </div>
+</a><a href="/products/hawaiian-floral-band-ring-gold-4mm-size-5/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0454.jpg" alt="Hawaiian Floral Band Ring — Gold (4mm, Size 5)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Hawaiian Floral Band Ring — Gold (4mm, Size 5)</div>
+    <div style="font-weight:700">$90</div>
+  </div>
+</a><a href="/products/hawaiian-floral-band-ring-rose-gold-4mm-size-5/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0457.jpg" alt="Hawaiian Floral Band Ring — Rose Gold (4mm, Size 5)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Hawaiian Floral Band Ring — Rose Gold (4mm, Size 5)</div>
+    <div style="font-weight:700">$90</div>
+  </div>
+</a><a href="/products/hawaiian-floral-band-ring-silver-4mm-size-5/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0451.jpg" alt="Hawaiian Floral Band Ring — Silver (4mm, Size 5)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Hawaiian Floral Band Ring — Silver (4mm, Size 5)</div>
+    <div style="font-weight:700">$90</div>
+  </div>
+</a><a href="/products/mens-adjustable-band-ring-3mm-silver/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0346.jpg" alt="Men&#39;s Adjustable Band Ring — 3mm (Silver)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Men&#39;s Adjustable Band Ring — 3mm (Silver)</div>
+    <div style="font-weight:700">$70</div>
+  </div>
+</a><a href="/products/moissanite-pav-band-ring-adjustable-005ct-tw/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0345.jpg" alt="Moissanite Pavé Band Ring — Adjustable (0.05ct TW)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Moissanite Pavé Band Ring — Adjustable (0.05ct TW)</div>
+    <div style="font-weight:700">$50</div>
+  </div>
+</a><a href="/products/vvs1-moissanite-mens-statement-ring-sterling-silver-sizes-812/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-RG-0356.jpg" alt="VVS1 Moissanite Men&#39;s Statement Ring (Sterling Silver, Sizes 8–12)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">VVS1 Moissanite Men&#39;s Statement Ring (Sterling Silver, Sizes 8–12)</div>
+    <div style="font-weight:700">$360</div>
+  </div>
+</a></div>
+  </div>
+</section>
+</body>
+</html>

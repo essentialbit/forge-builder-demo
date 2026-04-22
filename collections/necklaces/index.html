@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Necklaces — Forge Jewellery</title>
+<meta name="description" content="Necklaces">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/cart.js"></script>
+</head>
+<body>
+<header class="fb-header">
+  <div class="fb-header-inner">
+    <a href="/" class="fb-brand" style="font-family:var(--fb-heading-font)"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=200&amp;q=80" alt="Forge Jewellery" style="max-height:40px"></a>
+    <nav><a href="/">Home</a><a href="/shop/">Shop</a><a href="/about/">About</a></nav>
+    <button class="fb-cart-btn" onclick="window.fbCart?.open()">Cart (<span class="fb-cart-count">0</span>)</button>
+  </div>
+</header>
+<div id="fb-cart-overlay" onclick="window.fbCart?.close()"></div>
+<aside id="fb-cart-drawer" aria-label="Shopping cart">
+  <header>
+    <h2 style="margin:0;font-size:1.1rem">Your cart</h2>
+    <button onclick="window.fbCart?.close()" style="background:none;border:none;font-size:1.5rem;cursor:pointer">×</button>
+  </header>
+  <div class="fb-cart-items" id="fb-cart-items"></div>
+  <footer>
+    <div class="fb-cart-total">
+      <span>Total</span>
+      <span id="fb-cart-total">$0.00</span>
+    </div>
+    <button onclick="window.fbCart?.checkout()" style="width:100%;padding:0.875rem;background:var(--fb-accent);color:var(--fb-on-accent);border:none;border-radius:var(--fb-radius);font-weight:700;cursor:pointer">Checkout</button>
+  </footer>
+</aside>
+
+<section class="fb-section">
+  <div class="fb-inner" style="margin:0 auto;padding:0 1.5rem">
+    <h1 style="font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:0.5rem">Necklaces</h1>
+    <div style="margin-bottom:2rem"></div>
+    <p style="text-align:center;opacity:0.6;font-size:0.9rem;margin-bottom:2rem">27 products</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem"><a href="/products/gold-crystal-pearl-necklace-8mm-16/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PE-0004.jpg" alt="Gold Crystal Pearl Necklace (8mm, 16&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Crystal Pearl Necklace (8mm, 16&quot;)</div>
+    <div style="font-weight:700">$50</div>
+  </div>
+</a><a href="/products/gold-cuban-link-chain-necklace-2mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0114.jpg" alt="Gold Cuban Link Chain Necklace (2mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Cuban Link Chain Necklace (2mm, 18&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/gold-cuban-link-chain-necklace-3mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0263.jpg" alt="Gold Cuban Link Chain Necklace (3mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Cuban Link Chain Necklace (3mm, 18&quot;)</div>
+    <div style="font-weight:700">$20</div>
+  </div>
+</a><a href="/products/gold-curb-cuban-chain-necklace-3mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0122.jpg" alt="Gold Curb Cuban Chain Necklace (3mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Curb Cuban Chain Necklace (3mm, 18&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/gold-figaro-chain-necklace-3mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0056.jpg" alt="Gold Figaro Chain Necklace (3mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Figaro Chain Necklace (3mm, 18&quot;)</div>
+    <div style="font-weight:700">$20</div>
+  </div>
+</a><a href="/products/gold-figaro-chain-necklace-5mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0064.jpg" alt="Gold Figaro Chain Necklace (5mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Figaro Chain Necklace (5mm, 18&quot;)</div>
+    <div style="font-weight:700">$30</div>
+  </div>
+</a><a href="/products/gold-iced-out-cz-tennis-chain-necklace-10mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0540.jpg" alt="Gold Iced Out CZ Tennis Chain Necklace (10mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Iced Out CZ Tennis Chain Necklace (10mm, 18&quot;)</div>
+    <div style="font-weight:700">$200</div>
+  </div>
+</a><a href="/products/gold-rope-chain-necklace-25mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0001.jpg" alt="Gold Rope Chain Necklace (2.5mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Rope Chain Necklace (2.5mm, 18&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/gold-rope-chain-necklace-3mm-16/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0009.jpg" alt="Gold Rope Chain Necklace (3mm, 16&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Gold Rope Chain Necklace (3mm, 16&quot;)</div>
+    <div style="font-weight:700">$20</div>
+  </div>
+</a><a href="/products/iced-moissanite-cross-necklace-silver-14ct-tw/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PD-0012.jpg" alt="Iced Moissanite Cross Necklace — Silver (1.4ct TW)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Iced Moissanite Cross Necklace — Silver (1.4ct TW)</div>
+    <div style="font-weight:700">$130</div>
+  </div>
+</a><a href="/products/iced-moissanite-cross-necklace-silver-19ct-tw/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PD-0013.jpg" alt="Iced Moissanite Cross Necklace — Silver (1.9ct TW)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Iced Moissanite Cross Necklace — Silver (1.9ct TW)</div>
+    <div style="font-weight:700">$150</div>
+  </div>
+</a><a href="/products/moissanite-cross-necklace-silver-030ct/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PD-0007.jpg" alt="Moissanite Cross Necklace — Silver (0.30ct)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Moissanite Cross Necklace — Silver (0.30ct)</div>
+    <div style="font-weight:700">$100</div>
+  </div>
+</a><a href="/products/pearl-drop-pendant-necklace-gold-75mm-182/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PE-0009.jpg" alt="Pearl Drop Pendant Necklace — Gold (7.5mm, 18&quot;+2&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Pearl Drop Pendant Necklace — Gold (7.5mm, 18&quot;+2&quot;)</div>
+    <div style="font-weight:700">$90</div>
+  </div>
+</a><a href="/products/pearl-drop-pendant-necklace-silver-75mm-182/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PE-0008.jpg" alt="Pearl Drop Pendant Necklace — Silver (7.5mm, 18&quot;+2&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Pearl Drop Pendant Necklace — Silver (7.5mm, 18&quot;+2&quot;)</div>
+    <div style="font-weight:700">$90</div>
+  </div>
+</a><a href="/products/silver-crystal-pearl-necklace-8mm-16/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PE-0006.jpg" alt="Silver Crystal Pearl Necklace (8mm, 16&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Silver Crystal Pearl Necklace (8mm, 16&quot;)</div>
+    <div style="font-weight:700">$50</div>
+  </div>
+</a><a href="/products/silver-cuban-link-chain-necklace-2mm-20/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0260.jpg" alt="Silver Cuban Link Chain Necklace (2mm, 20&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Silver Cuban Link Chain Necklace (2mm, 20&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/silver-cuban-link-chain-necklace-3mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0267.jpg" alt="Silver Cuban Link Chain Necklace (3mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Silver Cuban Link Chain Necklace (3mm, 18&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/silver-curb-cuban-chain-necklace-3mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0126.jpg" alt="Silver Curb Cuban Chain Necklace (3mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Silver Curb Cuban Chain Necklace (3mm, 18&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/silver-figaro-chain-necklace-3mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0060.jpg" alt="Silver Figaro Chain Necklace (3mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Silver Figaro Chain Necklace (3mm, 18&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/silver-iced-out-cz-tennis-chain-necklace-10mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0541.jpg" alt="Silver Iced Out CZ Tennis Chain Necklace (10mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Silver Iced Out CZ Tennis Chain Necklace (10mm, 18&quot;)</div>
+    <div style="font-weight:700">$200</div>
+  </div>
+</a><a href="/products/silver-rope-chain-necklace-25mm-18/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0005.jpg" alt="Silver Rope Chain Necklace (2.5mm, 18&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Silver Rope Chain Necklace (2.5mm, 18&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/silver-rope-chain-necklace-3mm-16/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-NC-0015.jpg" alt="Silver Rope Chain Necklace (3mm, 16&quot;)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Silver Rope Chain Necklace (3mm, 16&quot;)</div>
+    <div style="font-weight:700">$10</div>
+  </div>
+</a><a href="/products/statement-moissanite-cross-necklace-silver-32ct-tw/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PD-0014.jpg" alt="Statement Moissanite Cross Necklace — Silver (3.2ct TW)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">Statement Moissanite Cross Necklace — Silver (3.2ct TW)</div>
+    <div style="font-weight:700">$180</div>
+  </div>
+</a><a href="/products/vvs-moissanite-cross-pendant-necklace-gold-070ct/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PD-0002.jpg" alt="VVS Moissanite Cross Pendant Necklace — Gold (0.70ct)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">VVS Moissanite Cross Pendant Necklace — Gold (0.70ct)</div>
+    <div style="font-weight:700">$90</div>
+  </div>
+</a><a href="/products/vvs-moissanite-cross-pendant-necklace-gold-110ct/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PD-0004.jpg" alt="VVS Moissanite Cross Pendant Necklace — Gold (1.10ct)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">VVS Moissanite Cross Pendant Necklace — Gold (1.10ct)</div>
+    <div style="font-weight:700">$140</div>
+  </div>
+</a><a href="/products/vvs-moissanite-cross-pendant-necklace-silver-070ct/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PD-0001.jpg" alt="VVS Moissanite Cross Pendant Necklace — Silver (0.70ct)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">VVS Moissanite Cross Pendant Necklace — Silver (0.70ct)</div>
+    <div style="font-weight:700">$100</div>
+  </div>
+</a><a href="/products/vvs-moissanite-cross-pendant-necklace-silver-110ct/" style="background:#fff;color:#111;border-radius:var(--fb-radius);overflow:hidden;display:block;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+  <div style="aspect-ratio:1/1;background:#f5f5f5"><img src="https://forgejewellery.com.au/images/products/FJ-PD-0003.jpg" alt="VVS Moissanite Cross Pendant Necklace — Silver (1.10ct)" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+  <div style="padding:0.875rem">
+    <div style="font-weight:600;font-size:0.92rem;line-height:1.3;margin-bottom:0.25rem">VVS Moissanite Cross Pendant Necklace — Silver (1.10ct)</div>
+    <div style="font-weight:700">$140</div>
+  </div>
+</a></div>
+  </div>
+</section>
+</body>
+</html>

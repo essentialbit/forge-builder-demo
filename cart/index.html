@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart — Forge Jewellery</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/cart.js"></script>
+</head>
+<body>
+<header class="fb-header">
+  <div class="fb-header-inner">
+    <a href="/" class="fb-brand" style="font-family:var(--fb-heading-font)"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=200&amp;q=80" alt="Forge Jewellery" style="max-height:40px"></a>
+    <nav><a href="/">Home</a><a href="/shop/">Shop</a><a href="/about/">About</a></nav>
+    <button class="fb-cart-btn" onclick="window.fbCart?.open()">Cart (<span class="fb-cart-count">0</span>)</button>
+  </div>
+</header>
+<div id="fb-cart-overlay" onclick="window.fbCart?.close()"></div>
+<aside id="fb-cart-drawer" aria-label="Shopping cart">
+  <header>
+    <h2 style="margin:0;font-size:1.1rem">Your cart</h2>
+    <button onclick="window.fbCart?.close()" style="background:none;border:none;font-size:1.5rem;cursor:pointer">×</button>
+  </header>
+  <div class="fb-cart-items" id="fb-cart-items"></div>
+  <footer>
+    <div class="fb-cart-total">
+      <span>Total</span>
+      <span id="fb-cart-total">$0.00</span>
+    </div>
+    <button onclick="window.fbCart?.checkout()" style="width:100%;padding:0.875rem;background:var(--fb-accent);color:var(--fb-on-accent);border:none;border-radius:var(--fb-radius);font-weight:700;cursor:pointer">Checkout</button>
+  </footer>
+</aside>
+<section class="fb-section">
+  <div class="fb-inner" style="margin:0 auto;padding:0 1.5rem;max-width:720px">
+    <h1 style="font-size:2rem;font-weight:700;margin-bottom:2rem">Your cart</h1>
+    <div id="fb-cart-page"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        const c = window.fbCart.read();
+        const root = document.getElementById('fb-cart-page');
+        if (!c || c.length === 0) {
+          root.innerHTML = '<p style="opacity:0.6;text-align:center;padding:3rem">Your cart is empty. <a href="/">Continue shopping →</a></p>';
+          return;
+        }
+        root.innerHTML = c.map(function(i){
+          return '<div style="display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid #eee"><img src="'+i.image+'" style="width:100px;height:100px;object-fit:cover;border-radius:var(--fb-radius)"><div style="flex:1"><div style="font-weight:600">'+i.name+'</div><div style="opacity:0.6;font-size:0.85rem">'+i.sku+'</div><div style="margin-top:0.5rem">'+i.qty+' × $'+i.price+'</div></div><div style="font-weight:700">$'+(i.qty*i.price).toFixed(2)+'</div></div>';
+        }).join('');
+        const total = c.reduce(function(s,i){return s+(i.price*i.qty);},0);
+        root.innerHTML += '<div style="display:flex;justify-content:space-between;padding:1.5rem 0;font-size:1.25rem;font-weight:700"><span>Total</span><span>$'+total.toFixed(2)+'</span></div><button onclick="window.fbCart.checkout()" style="width:100%;padding:1rem;background:var(--fb-accent);color:var(--fb-on-accent);border:none;border-radius:var(--fb-radius);font-weight:700;font-size:1rem;cursor:pointer">Checkout</button>';
+      });
+    </script>
+  </div>
+</section>
+</body>
+</html>

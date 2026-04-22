@@ -4,7 +4,7 @@
     "name": "Forge Jewellery",
     "status": "published"
   },
-  "generatedAt": "2026-04-22T11:50:54.025Z",
+  "generatedAt": "2026-04-22T12:08:50.561Z",
   "pages": [
     {
       "id": "home",
@@ -24,5 +24,7 @@
       "slug": "/about",
       "sections": 1
     }
-  ]
+  ],
+  "products": 85,
+  "collections": 6
 }
