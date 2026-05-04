@@ -1,0 +1,23 @@
+{
+  "id": "new-project-8g7oss",
+  "name": "New Project",
+  "description": "Imported from GitHub",
+  "created": "2026-05-04T10:47:02.476Z",
+  "updated": "2026-05-04T10:47:02.476Z",
+  "status": "draft",
+  "theme": {
+    "primaryColor": "#D4AF37",
+    "secondaryColor": "#0a0a0a",
+    "accentColor": "#ffffff",
+    "fontFamily": "Inter",
+    "logo": ""
+  },
+  "pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "slug": "/",
+      "sections": []
+    }
+  ]
+}

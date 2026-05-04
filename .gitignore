@@ -1,0 +1,11 @@
+# Forge Builder — auto-generated
+# Static-site exports and GitHub publish worktrees are NOT source files
+export/
+.forge-publish/
+*.log
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+node_modules/
